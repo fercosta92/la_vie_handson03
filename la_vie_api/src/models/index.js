@@ -1,6 +1,6 @@
-const Atendimento = require("./Atendimento");
-const Paciente = require("./Paciente");
-const Psicologo = require("./Psicologo");
+const Atendimento = require("./atendimento");
+const Paciente = require("./paciente");
+const Psicologo = require("./psicologo");
 
 
 Paciente.hasMany(Atendimento);
