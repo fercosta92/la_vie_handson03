@@ -8,12 +8,18 @@ const authMiddlewares = require("./middlewares/auth");
 const port = 3000;
 
 const app = express ();
-
 db.hasConnection();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
-app.use(authMiddlewares.unless({ path: ["/login", { url: "/psicologo", methods: 'POST' }]}));
+// app.use(authMiddlewares.unless(
+//     { 
+//         path: [
+//             "/login", 
+//             { url: "/psicologo", methods: 'POST' }
+//         ]
+//     }
+// ));
 
 app.use(routes);
 
