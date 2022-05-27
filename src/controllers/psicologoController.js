@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const { Psicologo } = require("../models");
+const bcrypt = require('bcrypt');
 
 const atributosRetorno = ['id', 'nome', 'email', 'apresentacao'];
 
@@ -37,7 +38,9 @@ const PsicologoController = {
             return;
         }
 
+        req.body.senha = await bcrypt.hash(req.body.senha, 10);
         const dados = await Psicologo.create(req.body);
+
         res.status(201).json(dados);
     },
 
@@ -73,6 +76,8 @@ const PsicologoController = {
             psicologo[atributo] = dados[atributo];
         }
 
+        psicologo.senha = await bcrypt.hash(psicologo.senha, 10);
+        
         await psicologo.save();
 
         const pacienteUpdate = await Psicologo.findByPk(id, {attributes: atributosRetorno});

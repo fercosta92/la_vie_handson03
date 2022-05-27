@@ -12,14 +12,8 @@ const AuthController = {
             raw: true,
         });
 
-        // if(!usuario || !bcrypt.compareSync(senha, usuario.senha)){
-        //     return res.status(401).json('E-mail ou senha inválido, verifique e tente novamente”');
-        // }
-
-        if(!usuario || senha != usuario.senha){
-            return res.status(401).json({
-                message: 'E-mail ou senha inválido, verifique e tente novamente'
-            });
+        if(!usuario || !bcrypt.compareSync(senha, usuario.senha)){
+            return res.status(401).json({message: 'E-mail ou senha inválido, verifique e tente novamente'});
         }
 
         const { senha: _senha, ...user} = usuario;

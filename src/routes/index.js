@@ -16,7 +16,7 @@ const loginValidator = require("../validators/login");
 
 routes.post('/login', validationMiddleware(loginValidator), authController.login);
 
-routes.get('/pacientes', authMiddleware, pacienteController.index);
+routes.get('/pacientes', pacienteController.index);
 routes.get('/pacientes/:id', authMiddleware, pacienteController.show);
 routes.post(
     '/pacientes', authMiddleware, 
@@ -32,11 +32,7 @@ routes.delete('/pacientes/:id', authMiddleware, pacienteController.destroy);
 
 routes.get('/psicologos', authMiddleware, psicologoController.index);
 routes.get('/psicologos/:id', authMiddleware, psicologoController.show);
-routes.post(
-    '/psicologos', authMiddleware,
-    validationMiddleware(psicologoValidator),
-    psicologoController.store
-);
+routes.post('/psicologos', validationMiddleware(psicologoValidator), psicologoController.store);
 routes.put(
     '/psicologos/:id', authMiddleware,
     validationMiddleware(psicologoValidator),

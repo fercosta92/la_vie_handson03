@@ -9,7 +9,7 @@ CREATE TABLE psicologo (
 	id INT PRIMARY KEY auto_increment,
   	nome VARCHAR(50) NOT NULL,
   	email VARCHAR(150) NOT NULL,
-  	senha VARCHAR(30) NOT NULL,
+  	senha VARCHAR(255) NOT NULL,
   	apresentacao VARCHAR(255) NOT NULL
 );
 

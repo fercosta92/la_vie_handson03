@@ -12,14 +12,6 @@ db.hasConnection();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
-// app.use(authMiddlewares.unless(
-//     { 
-//         path: [
-//             "/login", 
-//             { url: "/psicologo", methods: 'POST' }
-//         ]
-//     }
-// ));
 
 app.use(routes);
 
