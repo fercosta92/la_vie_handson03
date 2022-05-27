@@ -40,8 +40,12 @@ const PsicologoController = {
 
         req.body.senha = await bcrypt.hash(req.body.senha, 10);
         const dados = await Psicologo.create(req.body);
-
-        res.status(201).json(dados);
+        res.status(201).json({
+            id: dados.id,
+            nome: dados.nome,
+            email: dados.email,
+            apresentacao: dados.apresentacao,
+        });
     },
 
     update: async (req, res) => {

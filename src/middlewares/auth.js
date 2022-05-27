@@ -16,7 +16,8 @@ module.exports = (req, res, next) => {
         if (!decodedToken.email || !decodedToken.id) {
             res.status(403).json({message: 'Credenciais inválidas'});
             return;
-        } 
+        }
+
         req.body.psicologo_id = decodedToken.id;
         next();
     } catch(e) {
