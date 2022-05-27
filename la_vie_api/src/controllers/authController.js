@@ -8,10 +8,15 @@ const AuthController = {
         const { email, senha} = req.body;
 
         const usuario = await Psicologo.findOne({
-            where: { email } 
+            where: { email },
+            raw: true,
         });
 
-        if(!usuario || !bcrypt.compareSync(senha, usuario.senha)){
+        // if(!usuario || !bcrypt.compareSync(senha, usuario.senha)){
+        //     return res.status(401).json('E-mail ou senha inválido, verifique e tente novamente”');
+        // }
+
+        if(!usuario || senha != usuario.senha){
             return res.status(401).json('E-mail ou senha inválido, verifique e tente novamente”');
         }
 
