@@ -17,7 +17,9 @@ const AuthController = {
         // }
 
         if(!usuario || senha != usuario.senha){
-            return res.status(401).json('E-mail ou senha inválido, verifique e tente novamente”');
+            return res.status(401).json({
+                message: 'E-mail ou senha inválido, verifique e tente novamente'
+            });
         }
 
         const { senha: _senha, ...user} = usuario;

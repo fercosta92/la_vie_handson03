@@ -12,8 +12,6 @@ module.exports = (req, res, next) => {
         }
 
         const decodedToken = jwt.verify(token, secret.key);
-    
-        console.log(decodedToken);
 
         if (!decodedToken.email || !decodedToken.id) {
             res.status(403).json({message: 'Credenciais inválidas'});
@@ -22,7 +20,6 @@ module.exports = (req, res, next) => {
         req.body.psicologo_id = decodedToken.id;
         next();
     } catch(e) {
-        console.log(e);
         res.status(403).json({
             message: 'Credenciais inválidas'
         });

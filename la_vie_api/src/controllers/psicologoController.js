@@ -1,3 +1,4 @@
+const Sequelize = require('sequelize');
 const { Psicologo } = require("../models/");
 
 const atributosRetorno = ['id', 'nome', 'email', 'apresentacao'];
@@ -23,6 +24,19 @@ const PsicologoController = {
     },
 
     store: async (req, res) => {
+
+        const psicologoJaCadastrado = await Psicologo.findOne({
+            where: { email: req.body.email },
+            raw: true,
+        });
+
+        if(psicologoJaCadastrado){
+            res.status(400).json({
+                message: 'Já existe um psicologo com esse email cadastrado'
+            });
+            return;
+        }
+
         const dados = await Psicologo.create(req.body);
         res.status(201).json(dados);
     },
@@ -30,9 +44,25 @@ const PsicologoController = {
     update: async (req, res) => {
         const { id } = req.params;
         const dados = req.body;
-        const paciente = await Psicologo.findByPk(id, {attributes: atributosRetorno});
+
+        const psicologoJaCadastrado = await Psicologo.findOne({
+            where: { 
+                id: {[Sequelize.Op.not]: id},
+                email: req.body.email, 
+            },
+            raw: true,
+        });
+
+        if(psicologoJaCadastrado){
+            res.status(400).json({
+                message: 'Já existe um psicologo com esse email cadastrado'
+            });
+            return;
+        }
+
+        const psicologo = await Psicologo.findByPk(id, {attributes: atributosRetorno});
         
-        if(!paciente){
+        if(!psicologo){
             res.status(404).json({
                 message: "Psicologo não encontrado"
             });
@@ -40,10 +70,10 @@ const PsicologoController = {
         }
 
         for(let atributo in dados){
-            paciente[atributo] = dados[atributo];
+            psicologo[atributo] = dados[atributo];
         }
 
-        await paciente.save();
+        await psicologo.save();
 
         const pacienteUpdate = await Psicologo.findByPk(id, {attributes: atributosRetorno});
 
