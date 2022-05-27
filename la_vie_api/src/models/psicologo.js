@@ -3,7 +3,7 @@ const { DataTypes } = require("sequelize");
 const db = require("../database");
 
 const Psicologo = db.define(
-  "Psicologo",
+  "psicologo",
   {
     id: {
       type: DataTypes.INTEGER,
