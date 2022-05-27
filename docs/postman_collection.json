@@ -1,15 +1,16 @@
 {
 	"info": {
-		"_postman_id": "938a45b6-2c97-4bab-a528-133bed5caeec",
+		"_postman_id": "fe54e8af-29ab-4249-abc4-6818d5de0f00",
 		"name": "LA VIE",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21193007"
 	},
 	"item": [
 		{
 			"name": "PACIENTES",
 			"item": [
 				{
-					"name": "PACIENTES",
+					"name": "Listar todos os pacientes",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -33,7 +34,32 @@
 					"response": []
 				},
 				{
-					"name": "PACIENTES",
+					"name": "Listar paciente com id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6InRlc3RlIiwiZW1haWwiOiJ0ZXN0ZTAyQGdtYWlsLmNvbSIsImFwcmVzZW50YWNhbyI6InNvdSBvIHBzaWNvbG9nbyBkZSB0ZXN0ZSAwMiIsImlhdCI6MTY1MzYzNDE4NH0.0Cc4yJffGyk2J7gjb9kkhc6MuPxwQcYQsLtqrZjwroE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/pacientes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pacientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar dados paciente",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -66,7 +92,7 @@
 					"response": []
 				},
 				{
-					"name": "PACIENTES",
+					"name": "Substituir informação paciente",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -94,7 +120,7 @@
 					"response": []
 				},
 				{
-					"name": "PACIENTES",
+					"name": "Excluir paciente",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -127,7 +153,7 @@
 			"name": "PSICOLOGOS",
 			"item": [
 				{
-					"name": "PSICOLOGOS",
+					"name": "Listar todos os psicologos",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -151,7 +177,32 @@
 					"response": []
 				},
 				{
-					"name": "PSICOLOGOS",
+					"name": "Listar psicologos id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6InRlc3RlIiwiZW1haWwiOiJ0ZXN0ZTAyQGdtYWlsLmNvbSIsImFwcmVzZW50YWNhbyI6InNvdSBvIHBzaWNvbG9nbyBkZSB0ZXN0ZSAwMiIsImlhdCI6MTY1MzYzNDU0NH0.W2s-Pp6MEvADtrG9ZHByKLuuO8ZpE9i8Jf7qYROfuYQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/psicologos/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"psicologos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar dados psicologo",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -184,7 +235,7 @@
 					"response": []
 				},
 				{
-					"name": "PSICOLOGOS",
+					"name": "Substituir informações psicologo",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -218,7 +269,7 @@
 					"response": []
 				},
 				{
-					"name": "PSICOLOGOS",
+					"name": "Excluir psicologo",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -246,7 +297,7 @@
 					"response": []
 				},
 				{
-					"name": "LOGIN",
+					"name": "Login psicologo",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -278,7 +329,7 @@
 			"name": "ATENDIMENTOS",
 			"item": [
 				{
-					"name": "ATENDIMENTOS",
+					"name": "Listar todos os atendimentos",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -296,7 +347,26 @@
 					"response": []
 				},
 				{
-					"name": "ATENDIMENTOS",
+					"name": "Listar atendimentos id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/atendimentos/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"atendimentos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar dados atendimentos",
 					"request": {
 						"method": "POST",
 						"header": [
