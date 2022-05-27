@@ -4,7 +4,7 @@ const DB_NAME = "la_vie";
 const DABE_USER = "lavie_user";
 const DB_PASS = "handson03";
 const DB_CONFIG = {
-    host: "localhost",
+    host: "172.17.0.2",
     port: "3306",
     dialect: "mysql",
 };
