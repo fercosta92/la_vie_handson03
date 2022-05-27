@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const { Psicologo } = require("../models/");
+const { Psicologo } = require("../models");
 
 const atributosRetorno = ['id', 'nome', 'email', 'apresentacao'];
 

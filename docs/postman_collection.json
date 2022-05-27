@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "938a45b6-2c97-4bab-a528-133bed5caeec",
+		"name": "LA VIE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PACIENTES",
+			"item": [
+				{
+					"name": "PACIENTES",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6InRlc3RlIiwiZW1haWwiOiJ0ZXN0ZTAyQGdtYWlsLmNvbSIsImFwcmVzZW50YWNhbyI6InNvdSBvIHBzaWNvbG9nbyBkZSB0ZXN0ZSAwMiIsImlhdCI6MTY1MzYzNDE4NH0.0Cc4yJffGyk2J7gjb9kkhc6MuPxwQcYQsLtqrZjwroE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/pacientes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PACIENTES",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6InRlc3RlIiwiZW1haWwiOiJ0ZXN0ZTAyQGdtYWlsLmNvbSIsImFwcmVzZW50YWNhbyI6InNvdSBvIHBzaWNvbG9nbyBkZSB0ZXN0ZSAwMiIsImlhdCI6MTY1MzYzNDE4NH0.0Cc4yJffGyk2J7gjb9kkhc6MuPxwQcYQsLtqrZjwroE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Ñoño\",\n    \"email\": \"ñoño@yahoo.com.br\",\n    \"data_nascimento\": \"1970-10-15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pacientes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PACIENTES",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Ñoño\",\n    \"email\": \"ñoño@yahoo.com.br\",\n    \"data_nascimento\": \"1970-10-15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pacientes/6",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pacientes",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PACIENTES",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pacientes/9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pacientes",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PSICOLOGOS",
+			"item": [
+				{
+					"name": "PSICOLOGOS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6InRlc3RlIiwiZW1haWwiOiJ0ZXN0ZTAyQGdtYWlsLmNvbSIsImFwcmVzZW50YWNhbyI6InNvdSBvIHBzaWNvbG9nbyBkZSB0ZXN0ZSAwMiIsImlhdCI6MTY1MzYzNDU0NH0.W2s-Pp6MEvADtrG9ZHByKLuuO8ZpE9i8Jf7qYROfuYQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/psicologos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"psicologos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PSICOLOGOS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6InRlc3RlIiwiZW1haWwiOiJ0ZXN0ZTAyQGdtYWlsLmNvbSIsImFwcmVzZW50YWNhbyI6InNvdSBvIHBzaWNvbG9nbyBkZSB0ZXN0ZSAwMiIsImlhdCI6MTY1MzYzNDE4NH0.0Cc4yJffGyk2J7gjb9kkhc6MuPxwQcYQsLtqrZjwroE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"teste7\",\n    \"email\": \"teste7@gmail.com\",\n    \"apresentacao\": \"sou o psicologo de teste 7\",\n    \"senha\": \"senha6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/psicologos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"psicologos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PSICOLOGOS",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6InRlc3RlIiwiZW1haWwiOiJ0ZXN0ZTAyQGdtYWlsLmNvbSIsImFwcmVzZW50YWNhbyI6InNvdSBvIHBzaWNvbG9nbyBkZSB0ZXN0ZSAwMiIsImlhdCI6MTY1MzYzNDE4NH0.0Cc4yJffGyk2J7gjb9kkhc6MuPxwQcYQsLtqrZjwroE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"teste7\",\n    \"email\": \"teste7@gmail.com\",\n    \"apresentacao\": \"sou o psicologo de teste 7\",\n    \"senha\": \"senhwa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/psicologos/5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"psicologos",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PSICOLOGOS",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/psicologos/6",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"psicologos",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"teste06@gmail.com\",\n    \"senha\": 987\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ATENDIMENTOS",
+			"item": [
+				{
+					"name": "ATENDIMENTOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/atendimentos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"atendimentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATENDIMENTOS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibm9tZSI6InRlc3RlNiIsImVtYWlsIjoidGVzdGUwNkBnbWFpbC5jb20iLCJhcHJlc2VudGFjYW8iOiJzb3UgbyBwc2ljb2xvZ28gZGUgdGVzdGUgMDYiLCJpYXQiOjE2NTM2MzQ2NjZ9.uDL2l10ArQRN3iI_TBLeno1vtIoK3wnOWwjhyyq9_X8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data_atendimento\": \"2022-05-27T21:00:00-03:00\",\n    \"observacao\": \"este paciente foi atendido rapidamente\",\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/atendimentos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"atendimentos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
